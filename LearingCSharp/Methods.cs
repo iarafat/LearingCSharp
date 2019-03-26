@@ -20,24 +20,28 @@ namespace LearingCSharp
 
             Console.Write("In hat city were you born? ");
             string city = Console.ReadLine();
-
-            Console.Write("Results: ");
-            ReverseString(firstName);
-            ReverseString(lastName);
-            ReverseString(city);
+            DisplayReslut(ReverseString(firstName), ReverseString(lastName), ReverseString(city));
 
             Console.ReadLine();
         }
 
-        private static void ReverseString(string message)
+        private static string ReverseString(string message)
         {
             char[] messageArray = message.ToCharArray();
             Array.Reverse(messageArray);
-            foreach (var item in messageArray)
-            {
-                Console.Write(item);
-            }
-            Console.Write(" ");
+            return string.Concat(messageArray);
+        }
+
+        private static void DisplayReslut(
+            string reversFirstName, 
+            string reverseLastName, 
+            string reverseCity)
+        {
+            Console.Write("Results: ");
+            Console.Write(string.Format("{0} {1} {2}",
+            reversFirstName,
+            reverseLastName,
+            reverseCity));
         }
     }
 }
