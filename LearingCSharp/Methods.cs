@@ -20,7 +20,11 @@ namespace LearingCSharp
 
             Console.Write("In hat city were you born? ");
             string city = Console.ReadLine();
+
             DisplayReslut(ReverseString(firstName), ReverseString(lastName), ReverseString(city));
+
+           // Console.WriteLine();
+           // DisplayReslut(ReverseString(firstName) +" "+ ReverseString(lastName)+" "+ReverseString(city));
 
             Console.ReadLine();
         }
@@ -42,6 +46,12 @@ namespace LearingCSharp
             reversFirstName,
             reverseLastName,
             reverseCity));
+        }
+
+        private static void DisplayReslut(string message)
+        {
+            Console.Write("Results: ");
+            Console.Write(message);
         }
     }
 }
