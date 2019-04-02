@@ -34,7 +34,7 @@ namespace LearingCSharp
 
         static void HelperMethod()
         {
-            Console.WriteLine("From Helper method"+ K);
+            Console.WriteLine("From Helper method: "+ K);
         }
     }
 }
